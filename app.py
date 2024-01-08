@@ -4,7 +4,6 @@ import streamlit as st
 import pandas as pd
 import time
 import asyncio
-from playwright.sync_api import sync_playwright
 from playwright.async_api import async_playwright
 
 l1=[]
@@ -38,7 +37,7 @@ intro_list=[]
 # Function to search for modular factories in a district
 async def search_modular_factories_in_district(Keyword, district, State):
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=False)
+        browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
 
         # Replace this URL with the appropriate search URL for modular factories in the district
@@ -243,18 +242,6 @@ async def search_modular_factories_in_district(Keyword, district, State):
                 Place_Type = ""
                 place_t_list.append(Place_Type)
   
-   
-            
-            
-        
-        
-        # df = pd.DataFrame(list(zip(names_list, website_list,intro_list,phones_list,address_list,reviews_c_list,reviews_a_list,store_s_list,in_store_list,store_del_list,place_t_list,open_list)), columns =['Names','Website','Introduction','Phone Number','Address','Review Count','Average Review Count','Store Shopping','In Store Pickup','Delivery','Type','Opens At'])
-        # for column in df.columns:
-        #     if df[column].nunique() == 1:
-        #         df.drop(column, inplace=False)
-        # df.to_csv(r'result.csv', index = False)
-        # browser.close()
-        # print(df.head())
                 
         if os.path.exists('result.csv'):
     # Load existing data from result.csv
