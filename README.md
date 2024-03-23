@@ -7,7 +7,7 @@ This project aims to scrape Google search results for specific keywords related 
 1. Clone this repository to your local machine:
 
 ```
-git clone https://github.com/yourusername/google-scraping-project.git
+git clone https://github.com/Soumik0811/Google_Map_Scraper.git
 ```
 
 2. Navigate to the project directory:
