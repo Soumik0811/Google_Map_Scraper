@@ -1,4 +1,6 @@
-**Google Scraping Project Readme**
+![image](https://github.com/Soumik0811/Google_Map_Scraper/assets/91133940/afafcfd0-b5e6-4d1b-9662-bac1aedac741)
+
+**Google Scraping Project**
 
 This project aims to scrape Google search results for specific keywords related to modular factories in various districts across different states. Users can input the keyword, followed by the set of districts, and finally the state name to retrieve relevant information.
 
